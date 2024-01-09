@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center">
+
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="550dp"
+        android:background="@drawable/ic_manual_control_bg"
+        android:orientation="vertical">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lay_down"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:id="@+id/lay_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btn_exit_dialog"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:padding="25dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/ic_btn_exit_dialog"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/imgv_robot_parts"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="-20dp"
+                    android:elevation="1dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/ic_robot_pic_no_select" />
+
+                <TextView
+                    android:id="@+id/txtv_motor_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Name"
+                    android:textColor="@color/colorEff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtv_motor_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textColor="@color/colorEff"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btn_manual_control_arm"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/btn_eff_motor_arm"
+                        android:scaleType="fitXY" />
+
+                    <ImageButton
+                        android:id="@+id/btn_manual_control_base"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/btn_eff_motor_base"
+                        android:scaleType="fitXY" />
+
+                    <ImageButton
+                        android:id="@+id/btn_manual_control_lt_wheels"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/btn_eff_motor_car_lt_wheels"
+                        android:scaleType="fitXY" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btn_manual_control_rt_wheels"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/btn_eff_motor_car_rt_wheels"
+                        android:scaleType="fitXY" />
+
+                    <ImageButton
+                        android:id="@+id/btn_manual_control_catch"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/btn_eff_motor_catch"
+                        android:scaleType="fitXY" />
+
+                    <ImageButton
+                        android:id="@+id/btn_manual_control_cut"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/btn_eff_motor_cut"
+                        android:scaleType="fitXY" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btn_manual_control_head_lr"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/btn_eff_motor_head_lr"
+                        android:scaleType="fitXY" />
+
+                    <ImageButton
+                        android:id="@+id/btn_manual_control_head_ud"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/btn_eff_motor_head_ud"
+                        android:scaleType="fitXY" />
+
+                    <ImageButton
+                        android:id="@+id/btn_manual_control_updown"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/btn_eff_motor_updown"
+                        android:scaleType="fitXY" />
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/lay_down"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <FrameLayout
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp">
+
+                <ImageButton
+                    android:id="@+id/btn_manual_control_backward"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/btn_eff_manual_control_dir"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="center"
+                        android:text="Backward"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorTextDark"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp">
+
+                <ImageButton
+                    android:id="@+id/btn_manual_control_forward"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/btn_eff_manual_control_dir"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="center"
+                        android:text="Forward"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorTextDark"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,128 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'safisoft.greenbuddyrobot'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "safisoft.greenbuddyrobot"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        setProperty("archivesBaseName", "vision-quickstart")
+    }
+
+    buildTypes {
+        proguard {
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'proguard.cfg'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            isDefault true
+            minifyEnabled false
+            proguardFiles 'proguard-rules.pro'
+        }
+        testBuildType "debug"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    
+    // Do NOT compress tflite model files (need to call out to developers!)
+    aaptOptions {
+        noCompress "tflite"
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+
+    // Object detection feature with bundled default classifier
+    implementation 'com.google.mlkit:object-detection:17.0.0'
+
+    // Object detection feature with custom classifier support
+    implementation 'com.google.mlkit:object-detection-custom:17.0.1'
+
+    // Selfie segmentation
+    implementation 'com.google.mlkit:segmentation-selfie:16.0.0-beta4'
+
+    implementation 'com.google.mlkit:camera:16.0.0-beta3'
+
+    // -------------------------------------------------------
+
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.google.guava:guava:27.1-android'
+
+    // For how to setup gradle dependencies in Android X, see:
+    // https://developer.android.com/training/testing/set-up-project#gradle-dependencies
+    // Core library
+    androidTestImplementation 'androidx.test:core:1.4.0'
+
+    // AndroidJUnitRunner and JUnit Rules
+    androidTestImplementation 'androidx.test:runner:1.4.0'
+    androidTestImplementation 'androidx.test:rules:1.4.0'
+
+    // Assertions
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata:2.3.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:2.3.1"
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.annotation:annotation:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+
+
+    // On Device Machine Learnings
+    implementation "com.google.android.odml:image:1.0.0-beta1"
+
+    //lottie
+    def lottieVersion = "6.0.0"
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+
+
+
+    // in app review
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'com.google.android.play:core:1.10.3'
+
+
+
+
+    //permission
+    implementation 'pub.devrel:easypermissions:3.0.0'
+
+
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.23'
+
+
+}
+
+
+configurations {
+    // Resolves dependency conflict caused by some dependencies use
+    // com.google.guava:guava and com.google.guava:listenablefuture together.
+    all*.exclude group: 'com.google.guava', module: 'listenablefuture'
+}

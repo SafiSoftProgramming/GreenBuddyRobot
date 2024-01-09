@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_splash_bg"
+    tools:context=".SplashActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/gifTextView_ic_bluetooth"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:elevation="1dp"
+            app:lottie_rawRes="@raw/ic_green_eye_splash"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="50dp"
+    android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="103dp"
+            android:layout_marginBottom="-60dp"
+            android:elevation="1dp"
+            app:lottie_rawRes="@raw/ic_green_robot_arm"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+
+
+        <ImageView
+            android:layout_width="320dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_app_name" />
+</LinearLayout>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/safisoft_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitStart"
+        android:src="@drawable/ic_safisoft_logo_yallow" />
+
+
+
+</RelativeLayout>
